@@ -1,0 +1,24 @@
+
+ mod_log_user - Username logging module for apache httpd 2.0/2.2
+
+ Compile & install with : apxs2 -i -a -c mod_log_user.c
+
+ This very tiny module fills the r->user field with username so that
+ it is available for logging.
+
+ If there is an Authentication header, gets username so that it is available
+ for logging even if there is no Authentication module involved. Works with
+ Basic and Digest authentication.
+
+ This module can be useful in a reverse proxy environment where the proxy
+ logs all the traffic and authentication is done by proxyfied servers but
+ you want to log usernames in the main proxy logfile.
+
+ There is no configuration parameter, no activation switch, just load
+ the module and it will silently do its work.
+
+ Author  : Jérôme Grandjanny ( jerome.grandjanny@laposte.net )
+ Date    : April, 23th 2011
+ Version : 1.0
+
+ Licensed under the : http://www.apache.org/licenses/LICENSE-2.0
